@@ -1,6 +1,9 @@
-export default function AllMusic() {
-    return (
+import Song from "../components/main/song/song";
 
-        <div> Hello music</div>
-    )
+export default function AllMusic() {
+  return (
+    <>
+      <Song />
+    </>
+  );
 }

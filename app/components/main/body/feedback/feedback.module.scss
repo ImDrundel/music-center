@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+}
+
+.feedbackBlock {
+    display: flex;
+    background-color: #333 ; 
+    margin-top: 10px;
+    border-radius: 25px;
+    border: 2px solid #fff;
+    align-items: center;
+    flex-basis: content;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+.text {
+    margin: 0 20px 0 10px;
+}
