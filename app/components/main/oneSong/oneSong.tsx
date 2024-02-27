@@ -1,9 +1,10 @@
 import { promises as fs } from "fs";
-import style from "./song.module.scss";
+import style from "./oneSong.module.scss";
 import Image from "next/image";
 import SongIcon from "./img/song-icon.png";
 import PlayIcon from "./img/play-icon.png";
 import AddIcon from "./img/add-icon.png";
+import Link from "next/link";
 
 interface IFetcheddataTest {
   id: number;
@@ -34,7 +35,9 @@ export default async function Song() {
             </div>
             <div className={style.fullInfo}>
               <div className={style.nameAndRating}>
-                <div className={style.name}>{data.name}</div>
+                <div className={style.name}>
+                  <Link href={`/song/${data.id}`}>{data.name}</Link>
+                </div>
                 <div className={style.rating}>Rating: {data.rating}</div>
               </div>
               <div className={style.infoAndIcons}>
@@ -48,13 +51,14 @@ export default async function Song() {
                     <div className={style.date}>{data.date}</div>
                   </div>
                 </div>
-                <div className={style.playAndAdd}>
+                <div className={style.subbuttons}>
                   <button className={style.play}>
                     <Image src={PlayIcon} alt="PlayIcon" />
                   </button>
                   <button className={style.add}>
                     <Image src={AddIcon} alt="AddIcon" />
                   </button>
+                  {/* add "like" button */}
                 </div>
               </div>
             </div>

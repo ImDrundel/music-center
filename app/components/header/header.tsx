@@ -1,22 +1,32 @@
 import styles from "./header.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import AllMusicIcon from "./img/all-music-icon.svg";
+import CatalogIcon from "./img/catalog-icon.svg";
 
 export default function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.header__text}>
-        <Link className={styles.header__link} href="./">
+        <Link className={styles.header__link} href="/">
           Your music center
         </Link>
       </div>
       <div className={styles.buttons}>
-        <button className={styles.buttons__allMusic}>
-          <Link href="./all-music">
-            <Image src={AllMusicIcon} alt="All music" width={50} height={50} />
+        <button className={styles.buttons__catalog}>
+          <Link href="/catalog">
+            <Image src={CatalogIcon} alt="Catalog" width={50} height={50} />
           </Link>
         </button>
+      </div>
+
+      <div>
+        <Link href="/song/1">Song</Link>
+      </div>
+      <div>
+        <Link href="/artist/1">Artist</Link>
+      </div>
+      <div>
+        <Link href="/album/1">Album</Link>
       </div>
     </div>
   );
