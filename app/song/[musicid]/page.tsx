@@ -2,9 +2,9 @@ import Style from "./style.module.scss";
 import { promises as fs } from "fs";
 import Image from "next/image";
 // Change img directory!
-import SongIcon from "./../../components/main/oneSong/img/song-icon.png";
-import PlayIcon from "../components/main/song/img/song-icon.png";
-import AddIcon from "./../../components/main/oneSong/img/song-icon.png";
+import SongIcon from "@/public/song-icon.png";
+import PlayIcon from "@/public/song-icon.png";
+import AddIcon from "@/public/song-icon.png";
 // import { useRouter } from "next/router";
 
 interface IFetcheddataTest {

@@ -1,9 +1,9 @@
 import { promises as fs } from "fs";
 import style from "./oneSong.module.scss";
 import Image from "next/image";
-import SongIcon from "./img/song-icon.png";
-import PlayIcon from "./img/play-icon.png";
-import AddIcon from "./img/add-icon.png";
+import SongIcon from "@/public/song-icon.png";
+import PlayIcon from "@/public/play-icon.png";
+import AddIcon from "@/public/add-icon.png";
 import Link from "next/link";
 
 interface IFetcheddataTest {

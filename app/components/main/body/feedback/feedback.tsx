@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./feedback.module.scss";
 import React from "react";
-import CatAvatar from "./cat-avatar.jpg";
+import CatAvatar from "@/public/cat-avatar.jpg";
 
 interface FeedbackProps {
   state: Array<{ id: string; feedbackText: string; likesCount: string }>;
