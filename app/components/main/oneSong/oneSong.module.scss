@@ -104,6 +104,7 @@ $fs: 20px;
                     border: 0;
                     width: 70px;
                     height: 70px;
+                    margin: 0 5px 0 5px;
                     //transition: border 0.2s ease-in;
                     //transition: border-radius 0.1s ease-in;
 
@@ -118,7 +119,18 @@ $fs: 20px;
                     border: 0;
                     width: 70px;
                     height: 70px;
-                    margin: 0 10px 0 10px;
+                    margin: 0 5px 0 5px;
+                    &:hover {
+                        border: 2px solid black;
+                        border-radius: 20px;
+                    }
+                }
+                .like {
+                    background: rgba(0, 0, 0, 0);
+                    border: 0;
+                    width: 70px;
+                    height: 70px;
+                    margin: 0 5px 0 5px;
 
                     &:hover {
                         border: 2px solid black;

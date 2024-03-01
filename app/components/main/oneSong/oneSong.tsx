@@ -1,9 +1,11 @@
-import { promises as fs } from "fs";
+'use client'
 import style from "./oneSong.module.scss";
 import Image from "next/image";
 import SongIcon from "@/public/song-icon.png";
 import PlayIcon from "@/public/play-icon.png";
 import AddIcon from "@/public/add-icon.png";
+import LikeButtonUnpressed from "@/public/like-button-unpressed.svg";
+import LikeButtonPressed from "@/public/like-button-pressed.svg";
 import Link from "next/link";
 
 interface IFetcheddataTest {
@@ -18,16 +20,12 @@ interface IFetcheddataTest {
   s: number;
 }
 
-export default async function Song() {
-  const file = await fs.readFile(
-    process.cwd() + "/public/music-list-data.json",
-    "utf8"
-  );
-  const data = JSON.parse(file);
+export default function OneSong(props: any) {
+
 
   return (
     <>
-      {data.songs.map((data: IFetcheddataTest) => {
+      {props.musicCatalog.songs.map((data: IFetcheddataTest) => {
         return (
           <div className={style.block} key={data.id}>
             <div className={style.image}>
@@ -54,6 +52,9 @@ export default async function Song() {
                 <div className={style.subbuttons}>
                   <button className={style.play}>
                     <Image src={PlayIcon} alt="PlayIcon" />
+                  </button>
+                  <button className={style.like} onClick={()=> {alert('ok')}}>
+                    <Image src={LikeButtonUnpressed} alt="LikeButton"/>
                   </button>
                   <button className={style.add}>
                     <Image src={AddIcon} alt="AddIcon" />
