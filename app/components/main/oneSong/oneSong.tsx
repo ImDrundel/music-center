@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import style from "./oneSong.module.scss";
 import Image from "next/image";
 import SongIcon from "@/public/song-icon.png";
@@ -7,6 +7,7 @@ import AddIcon from "@/public/add-icon.png";
 import LikeButtonUnpressed from "@/public/like-button-unpressed.svg";
 import LikeButtonPressed from "@/public/like-button-pressed.svg";
 import Link from "next/link";
+import React, { useState } from "react";
 
 interface IFetcheddataTest {
   id: number;
@@ -22,10 +23,33 @@ interface IFetcheddataTest {
 
 export default function OneSong(props: any) {
 
+  // const state = {
+  //   isLike: false,
+  // };
 
+  // let img = LikeButtonUnpressed;
+
+  // const [like, setLike] = useState(state);
+
+  // const onClick = () => {
+  //   if (like.isLike) {
+  //     like.isLike = false;
+  //     img = LikeButtonPressed;
+  //   } else {
+  //     like.isLike = true;
+  //     img = LikeButtonUnpressed;
+  //   }
+
+  //   setLike({...like});
+  // };
+
+
+  //В том ли месте я добавляю useState
+  //Как праивльно обновлять без мутации стейт с одном переменной, которая меняется 
+  //Как сделать перерисовку
   return (
     <>
-      {props.musicCatalog.songs.map((data: IFetcheddataTest) => {
+      {props.songs?.map((data: IFetcheddataTest) => {
         return (
           <div className={style.block} key={data.id}>
             <div className={style.image}>
@@ -53,13 +77,15 @@ export default function OneSong(props: any) {
                   <button className={style.play}>
                     <Image src={PlayIcon} alt="PlayIcon" />
                   </button>
-                  <button className={style.like} onClick={()=> {alert('ok')}}>
-                    <Image src={LikeButtonUnpressed} alt="LikeButton"/>
+                  {/* <button className={style.like} onClick={onClick}>
+                    <Image src={img} alt="LikeButton" />
+                  </button> */}
+                  <button className={style.like} >
+                    <Image src={LikeButtonUnpressed} alt="LikeButton" />
                   </button>
                   <button className={style.add}>
                     <Image src={AddIcon} alt="AddIcon" />
                   </button>
-                  {/* add "like" button */}
                 </div>
               </div>
             </div>

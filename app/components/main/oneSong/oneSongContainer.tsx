@@ -23,7 +23,7 @@ export default async function SongContainer() {
 
   return ( 
     <>
-    <OneSong musicCatalog={data} />
+    <OneSong {...data} />
     </>
   );
 }

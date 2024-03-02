@@ -18,10 +18,7 @@ export default function Header() {
           </Link>
         </button>
       </div>
-
-      <div>
-        <Link href="/song/1">Song</Link>
-      </div>
+      
       <div>
         <Link href="/artist/1">Artist</Link>
       </div>

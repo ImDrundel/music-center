@@ -41,7 +41,7 @@ export default function Body(props: any) {
           ref={newPostText}
           name="Text"
           id="1"
-        ></textarea>
+        />
         <button onClick={onClick}>Sent message</button>
       </div>
       <div className={styles.container}>
