@@ -2,13 +2,15 @@ import styles from "./header.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import CatalogIcon from "./img/catalog-icon.svg";
+import LogoIcon from "./img/logo-icon.svg"
 
 export default function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.header__text}>
         <Link className={styles.header__link} href="/">
-          Your music center
+          <Image className={styles.LogoIcon} src={LogoIcon} alt="Catalog" width={50} height={50} />
+          Astral music
         </Link>
       </div>
       <div className={styles.buttons}>
