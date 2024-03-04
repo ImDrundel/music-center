@@ -11,3 +11,26 @@ body {
   background: linear-gradient(to left, #B06AB3, #4568DC);
   color: #fff;
 }
+
+.error404 {
+  height: 100vh;
+  object-fit: fill;
+  background-image: url('./../public/backgroung404.png');
+  padding: 200px;
+  &__textbox {
+    width:max-content;
+    height: max-content;
+    padding: 20px;
+    background-color: #302c5c;
+    margin: 0 40%;
+    border-radius: 20px;
+    border: #fff 2px solid;
+  }
+  &__upLine {
+    text-align: center;
+  }
+}
+
+.image404 {
+position:absolute;
+}
