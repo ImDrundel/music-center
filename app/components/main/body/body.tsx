@@ -1,6 +1,6 @@
 "use client";
 import styles from "./body.module.scss";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Feedback from "./feedback/feedback";
 
 const constFeedbackData = [
@@ -20,7 +20,7 @@ let currentFeedbackId = 11;
 export default function Body(props: any) {
   const [feedbackData, setFeedbackData] = useState(constFeedbackData);
 
-  let newPostText: any = React.createRef();
+  let newPostText: any = useRef();
   let onClick = () => {
     let text = newPostText.current.value;
     let newFeedback = {

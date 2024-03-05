@@ -1,17 +1,14 @@
-
 import { promises as fs } from "fs";
-import OneSong from "./oneSong"
+import OneSong from "./oneSong";
 
-interface propsI {
+export interface Song {
   id: number;
-  data: any;
   name: string;
-  rating: number;
-  artist: string;
   duration: string;
+  artist: string;
+  rating: number;
   album: string;
   date: string;
-  s: number;
 }
 
 export default async function SongContainer() {
@@ -19,11 +16,13 @@ export default async function SongContainer() {
     process.cwd() + "/public/music-list-data.json",
     "utf8"
   );
-  const data = JSON.parse(file);
+  const songs = JSON.parse(file);
 
-  return ( 
+  return (
     <>
-    <OneSong {...data} />
+      {songs.songs?.map((song: Song) => {
+        return <OneSong song={song} key={song.id} />;
+      })}
     </>
   );
 }
