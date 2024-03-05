@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/components/main/song-bad-realization/Fetcheddata.ts"
-  ],
+, "app/fakeApiTest/page.tsx"  ],
   "exclude": [
     "node_modules"
   ]
