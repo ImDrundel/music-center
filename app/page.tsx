@@ -1,15 +1,12 @@
 "use client";
 import Footer from "./components/footer/footer";
-import Body from "./components/main/body/body";
-
+import BodyContext from "./feedbackContext";
 
 export default function Home() {
   return (
-    <div>
-      <>
-        <Body />
-        <Footer />
-      </>
-    </div>
+    <>
+      <BodyContext />
+      <Footer />
+    </>
   );
 }
