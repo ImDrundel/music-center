@@ -1,9 +1,14 @@
-@import "nullstile.scss";
+@import "reset.scss";
 
 * {
   padding: 0;
   margin: 0;
 }
+html {
+  font-family: var(--font-lemon);
+}
+
+
 
 body {
   background: #4568DC;
