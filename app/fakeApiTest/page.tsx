@@ -11,6 +11,7 @@ type Posts = Array<Post>;
 
 export default function SongPreview() {
   const [posts, setPosts] = useState<Posts | null>(null);
+
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((res) => res.json())

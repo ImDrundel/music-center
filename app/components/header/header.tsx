@@ -2,14 +2,20 @@ import styles from "./header.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import CatalogIcon from "./img/catalog-icon.svg";
-import LogoIcon from "./img/logo-icon.svg"
+import LogoIcon from "./img/logo-icon.svg";
 
 export default function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.header__text}>
         <Link className={styles.header__link} href="/">
-          <Image className={styles.LogoIcon} src={LogoIcon} alt="Catalog" width={50} height={50} />
+          <Image
+            className={styles.LogoIcon}
+            src={LogoIcon}
+            alt="Catalog"
+            width={50}
+            height={50}
+          />
           Astral music
         </Link>
       </div>
@@ -20,12 +26,18 @@ export default function Header() {
           </Link>
         </button>
       </div>
-      
+
       <div>
         <Link href="/artist/1">Artist</Link>
       </div>
       <div>
         <Link href="/album/1">Album</Link>
+      </div>
+      <div>
+        <Link href="/spotifyApiTest">Spotify api</Link>
+      </div>
+      <div>
+        <Link href="/fakeApiTest">Fake api</Link>
       </div>
     </div>
   );
